@@ -14,4 +14,5 @@ Este repositório contém as soluções dos 15 exercícios solicitados na Tarefa
    npm install -g prompt-sync
 
 3. **Execute qualquer exercício com o comando:
+ ```bash
  node ex01.js
