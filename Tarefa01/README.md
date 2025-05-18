@@ -12,12 +12,13 @@ curso-prati/
     ├── enunciados.md // Enunciados dos exercícios
     └── README.md // Este arquivo
 ```
+
 ## 📋 Requisitos
 
-Para executar os exercícios, você precisará ter:
+Para executar os exercícios, você precisará ter instalado:
 
-- [Node.js](https://nodejs.org/    ) instalado (para executar os algoritmos)
-- Módulo [`prompt-sync`](https://www.npmjs.com/package/prompt-sync ) instalado globalmente
+- [Node.js](https://nodejs.org/ ) (para executar os algoritmos — recomenda-se a versão LTS)
+- Módulo [`prompt-sync`](https://www.npmjs.com/package/prompt-sync ) (para entrada via terminal)
 
 ## 🚀 Instruções para Execução
 
@@ -25,16 +26,15 @@ Para executar os exercícios, você precisará ter:
 
 1. **Clone o repositório:**
    ```bash
-   git clone https://github.com/pwguimar/curso-prati.git
+   git clone https://github.com/pwguimar/curso-prati.git 
    ```
 2. **Acesse a pasta do projeto:**
    ```bash
    cd curso-prati/tarefa01
    ```
-3. **Instale o Node.js (se ainda não tiver):**
-Se você ainda não tem o Node.js instalado, baixe e instale a versão LTS mais recente (vide acima).
+3. **Instale o Node.js (se ainda não tiver):** se você ainda não tem o Node.js instalado, baixe e instale a versão LTS mais recente (vide acima).
 
-5. **Instale a biblioteca prompt-sync:**
+4. **Instale a biblioteca prompt-sync:**
 #### Opção 1: Instalação global (recomendado se for usar em outros projetos)
 ```bash
 npm install -g prompt-sync
@@ -55,3 +55,12 @@ node algoritmos/ex03.js
 ...
 node algoritmos/ex15.js
 ```
+
+## 📝 Sobre os Exercícios
+- Cada arquivo .js é independente e contém a solução para um exercício específico.
+- Os enunciados completos estão disponíveis no arquivo enunciados.md .
+
+## ⚙️ Detalhes Técnicos
+- Todos os exercícios foram desenvolvidos com JavaScript puro.
+- Utilizamos a biblioteca prompt-sync para permitir entrada de dados via console.
+- Os exercícios foram testados com Node.js versão 14.x e superiores .
