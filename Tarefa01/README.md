@@ -25,7 +25,7 @@ Para executar os exercícios, você precisará ter:
 
 1. **Clone o repositório:**
    ```bash
-   git clone https://github.com/SEU_USUARIO/curso-prati.git
+   git clone https://github.com/pwguimar/curso-prati.git
    ```
 2. **Acesse a pasta do projeto:**
    ```bash
