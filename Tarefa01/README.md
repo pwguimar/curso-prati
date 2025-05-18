@@ -1,26 +1,57 @@
 # Tarefa 01 - Exercícios de JavaScript
 
-Este repositório contém as soluções dos 15 exercícios solicitados na Tarefa 01.
-
-Todos os códigos foram desenvolvidos com base nos enunciados fornecidos, utilizando boas práticas de programação e código limpo.
-
----
+Este repositório reúne as soluções dos 15 exercícios da **Tarefa 01** do curso +Prati a ser entregue até 18/05/2025.
 
 ## 📁 Estrutura do Projeto
 
-Os exercícios estão organizados na pasta `/algoritmos`, com os seguintes nomes:
-- `ex01.js`
-- `ex02.js`
-- ...
-- `ex15.js`
+A pasta principal do projeto está organizada da seguinte forma:
+```
+curso-prati/
+└── tarefa01/
+    ├── algoritmos/  // Scripts JS com as soluções (ex01.js, ex02.js, ...)
+    ├── enunciados.md // Enunciados dos exercícios
+    └── README.md // Este arquivo
+```
+## 📋 Requisitos
 
----
+Para executar os exercícios, você precisará ter:
 
-## 🛠 Como Executar os Exercícios
+- [Node.js](https://nodejs.org/    ) instalado (para executar os algoritmos)
+- Módulo [`prompt-sync`](https://www.npmjs.com/package/prompt-sync ) instalado globalmente
 
-1. **Instale o Node.js (se ainda não tiver):**  
-   [Clique aqui para baixar](https://nodejs.org/ )
+## 🚀 Instruções para Execução
 
-2. **Instale a biblioteca `prompt-sync` (necessária para entrada de dados):**
+### Para usuários de Git/GitHub:
+
+1. **Clone o repositório:**
    ```bash
-   npm install -g prompt-sync
+   git clone https://github.com/SEU_USUARIO/curso-prati.git
+   ```
+2. **Acesse a pasta do projeto:**
+   ```bash
+   cd curso-prati/tarefa01
+   ```
+3. **Instale o Node.js (se ainda não tiver):**
+Se você ainda não tem o Node.js instalado, baixe e instale a versão LTS mais recente (vide acima).
+
+5. **Instale a biblioteca prompt-sync:**
+#### Opção 1: Instalação global (recomendado se for usar em outros projetos)
+```bash
+npm install -g prompt-sync
+```
+#### Opção 2: Instalação local (apenas para este projeto)
+```bash
+npm install prompt-sync
+```
+5. **Execute qualquer exercício:**
+##### Se os arquivos estiverem na pasta algoritmos:
+```bash
+node algoritmos/ex01.js
+```
+##### Substitua ex01.js pelo exercício desejado (ex02.js, ex03.js, etc.)
+```bash
+node algoritmos/ex02.js
+node algoritmos/ex03.js
+...
+node algoritmos/ex15.js
+```
