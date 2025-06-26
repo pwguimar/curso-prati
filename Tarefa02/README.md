@@ -1,6 +1,6 @@
 # Tarefa 02 - Exercícios de JavaScript
 
-Este repositório reúne as soluções dos 09 exercícios da **Tarefa 02** do curso +Prati (com testes) a ser entregue até 25/06/2025.
+Este repositório reúne as soluções dos 09 exercícios da **Tarefa 02** do curso +Prati (com testes) a ser entregue até 26/06/2025.
 
 ## 📋 Requisitos
 
