@@ -1,7 +1,7 @@
 # Página de Perfil Pessoal
 Este repositório contém os arquivos para uma página de perfil pessoal desenvolvida como parte da Atividade 04 do curso (Página de Perfil Pessoal). O objetivo é criar uma página web utilizando HTML5 semântico e CSS, aplicando conceitos como Flexbox/CSS Grid, variáveis CSS, pseudo-classes, pseudo-elementos e responsividade.
 ## Estrutura do Projeto
-*   **`perfil.html`**: O arquivo principal HTML que estrutura o conteúdo da página.
+*   **`index.html`**: O arquivo principal HTML que estrutura o conteúdo da página.
 *   **`styles.css`**: O arquivo CSS que define a estilização e o layout da página.
 *   **`imagens_p1/`**: Pasta para armazenar as imagens do projeto, como a foto de perfil.
 ## Funcionalidades
