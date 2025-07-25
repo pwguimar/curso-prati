@@ -1,0 +1,147 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+/* Estilos para o cabeçalho principal */
+.main-header {
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between; /* Alinha logo à esquerda e nav/hamburger à direita */
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+/* Estilos para a navegação padrão (desktop) */
+.main-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex; /* Links lado a lado */
+}
+
+.main-nav li {
+    margin-left: 20px;
+}
+
+.main-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #00bcd4; /* Cor de destaque ao passar o mouse */
+}
+
+/* Esconde o botão hamburger por padrão (em telas grandes) */
+.hamburger-menu {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 24px;
+    position: relative;
+    z-index: 1001; /* Garante que fique acima do menu quando aberto */
+}
+
+.hamburger-menu .bar {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: white;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+.hamburger-menu .bar:last-child {
+    margin-bottom: 0;
+}
+
+/* Estilos para o conteúdo principal da página */
+.content {
+    padding: 20px;
+    max-width: 960px;
+    margin: 20px auto;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* -------------------------------------------------------------------------- */
+/* MEDIA QUERY: Estilos para telas com largura de 600px ou menos */
+/* -------------------------------------------------------------------------- */
+@media (max-width: 600px) {
+    /* Mostra o botão hamburger */
+    .hamburger-menu {
+        display: block;
+    }
+
+    /* Esconde a navegação padrão */
+    .main-nav {
+        /* Posiciona o menu fora da tela à direita */
+        position: fixed;
+        top: 0;
+        right: -100%; /* Inicia fora da tela */
+        width: 70%; /* Largura do menu quando aberto */
+        height: 100%;
+        background-color: #222; /* Fundo escuro para o menu mobile */
+        padding-top: 60px; /* Espaço para o cabeçalho */
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.3);
+        transition: right 0.3s ease-in-out; /* Transição suave para abrir/fechar */
+        z-index: 1000; /* Garante que o menu fique acima do conteúdo */
+        display: flex; /* Usa flexbox para centralizar itens verticalmente */
+        flex-direction: column; /* Itens em coluna */
+        align-items: center; /* Centraliza horizontalmente */
+    }
+
+    .main-nav ul {
+        flex-direction: column; /* Links um abaixo do outro */
+        width: 100%;
+        text-align: center;
+    }
+
+    .main-nav li {
+        margin: 15px 0; /* Espaçamento vertical entre os links */
+    }
+
+    .main-nav a {
+        font-size: 1.2em;
+        padding: 10px 0;
+        display: block; /* Faz o link ocupar a largura total do item */
+    }
+
+    /* Estado 'active' do menu (quando o hamburger é clicado) */
+    .main-nav.active {
+        right: 0; /* Move o menu para dentro da tela */
+    }
+
+    /* Animação do ícone hamburger quando o menu está ativo */
+    .hamburger-menu.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger-menu.active .bar:nth-child(2) {
+        opacity: 0; /* Esconde a barra do meio */
+    }
+
+    .hamburger-menu.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}

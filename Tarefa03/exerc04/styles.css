@@ -1,0 +1,60 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Garante que padding e border sejam incluídos na largura/altura total */
+}
+
+header {
+    background-color: #28a745;
+    /* Cor de fundo verde */
+    color: white;
+    /* Cor do texto branca */
+    padding: 20px;
+    /* Espaçamento interno */
+    margin: 10px;
+    /* Margem externa */
+    border: 5px solid #1e7e34;
+    /* Borda sólida */
+    text-align: center;
+}
+
+main {
+    background-color: #f8f9fa;
+    /* Cor de fundo cinza claro */
+    color: #333;
+    /* Cor do texto cinza escuro */
+    padding: 20px;
+    /* Espaçamento interno */
+    margin: 10px;
+    /* Margem externa */
+    border: 5px dashed #6c757d;
+    /* Borda tracejada */
+}
+
+/* Para melhorar a visualização dos contornos, adicionamos um estilo básico para as seções dentro do main */
+main section {
+    margin-bottom: 20px;
+    /* Espaçamento entre as seções */
+    padding: 15px;
+    border: 1px solid #dee2e6;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #343a40;
+    /* Cor de fundo cinza escuro */
+    color: white;
+    /* Cor do texto branca */
+    padding: 15px;
+    /* Espaçamento interno */
+    margin: 10px;
+    /* Margem externa */
+    border: 5px double #000;
+    /* Borda dupla */
+    text-align: center;
+}

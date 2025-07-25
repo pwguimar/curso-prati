@@ -1,0 +1,112 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+
+    /* Configuração Flexbox para centralizar o contêiner da galeria */
+    display: flex;
+    justify-content: center;
+    /* Centraliza horizontalmente o conteúdo do body */
+    align-items: center;
+    /* Centraliza verticalmente o conteúdo do body (opcional, mas bom para demonstração) */
+    min-height: 100vh;
+    /* Garante que o body ocupe a altura total da viewport */
+}
+
+.gallery-wrapper {
+    /* Este contêiner serve para limitar a largura máxima da galeria
+       e é o item que será centralizado pelo Flexbox do body. */
+    max-width: 1200px;
+    /* Largura máxima da galeria */
+    width: 100%;
+    /* Ocupa 100% da largura disponível até o max-width */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.gallery-grid {
+    display: grid;
+    /* grid-template-columns:
+       - repeat(auto-fit, ...): Cria quantas colunas couberem na largura disponível.
+       - minmax(250px, 1fr): Cada coluna terá no mínimo 250px e no máximo 1 fração do espaço disponível.
+         Isso faz com que as "figuras quebrem de linha" automaticamente quando não há espaço suficiente. */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    /* Espaçamento entre os itens da galeria (imagens + legendas) */
+    justify-items: center;
+    /* Centraliza cada item dentro de sua célula do grid */
+}
+
+.gallery-item {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    /* Garante que a imagem não saia dos limites do item */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    /* Transforma o item em um contêiner flex para alinhar imagem e legenda */
+    flex-direction: column;
+    /* Organiza a imagem e a legenda em coluna */
+    height: 100%;
+    /* Permite que os itens se estiquem para ter a mesma altura na linha do grid */
+}
+
+.gallery-item img {
+    max-width: 100%;
+    /* Garante que a imagem nunca exceda a largura de seu contêiner */
+    height: 200px;
+    /* Define uma altura fixa para todas as imagens */
+    object-fit: cover;
+    /* Recorta a imagem para preencher a área, mantendo a proporção */
+    display: block;
+    /* Remove qualquer espaço extra abaixo da imagem */
+    width: 100%;
+    /* Garante que a imagem ocupe 100% da largura do item */
+    border-bottom: 1px solid #eee;
+    /* Linha sutil abaixo da imagem */
+}
+
+.gallery-item figcaption {
+    padding: 10px;
+    font-size: 0.9em;
+    color: #555;
+    flex-grow: 1;
+    /* Permite que a legenda ocupe o espaço restante, empurrando-a para baixo */
+    display: flex;
+    /* Para centralizar o texto da legenda verticalmente se houver espaço */
+    align-items: center;
+    /* Centraliza o texto da legenda verticalmente */
+    justify-content: center;
+    /* Centraliza o texto da legenda horizontalmente */
+}
+
+/* Media Queries para ajustar o número de colunas do Grid em telas menores */
+
+/* Para telas médias (ex: tablets, até 768px de largura) */
+@media (max-width: 768px) {
+    .gallery-grid {
+        /* Permite 2 colunas ou mais, com um mínimo de 200px por coluna */
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+}
+
+/* Para telas pequenas (ex: celulares, até 480px de largura) */
+@media (max-width: 480px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        /* Apenas 1 coluna, ocupando toda a largura disponível */
+        gap: 10px;
+    }
+
+    .gallery-item img {
+        height: 180px;
+        /* Ajusta a altura da imagem para telas menores */
+    }
+}

@@ -1,0 +1,101 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos do Exercício 4: CSS Básico e Box Model */
+header {
+    background-color: #28a745;
+    /* Cor de fundo verde */
+    color: white;
+    /* Cor do texto branca */
+    padding: 20px;
+    /* Espaçamento interno */
+    margin: 10px;
+    /* Margem externa */
+    border: 5px solid #1e7e34;
+    /* Borda sólida */
+    text-align: center;
+}
+
+main {
+    background-color: #f8f9fa;
+    /* Cor de fundo cinza claro */
+    color: #333;
+    /* Cor do texto cinza escuro */
+    padding: 20px;
+    /* Espaçamento interno */
+    margin: 10px;
+    /* Margem externa */
+    border: 5px dashed #6c757d;
+    /* Borda tracejada */
+}
+
+/* Para melhorar a visualização dos contornos, adicionamos um estilo básico para as seções dentro do main */
+main section {
+    margin-bottom: 20px;
+    /* Espaçamento entre as seções */
+    padding: 15px;
+    border: 1px solid #dee2e6;
+    background-color: #fff;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #343a40;
+    /* Cor de fundo cinza escuro */
+    color: white;
+    /* Cor do texto branca */
+    padding: 15px;
+    /* Espaçamento interno */
+    margin: 10px;
+    /* Margem externa */
+    border: 5px double #000;
+    /* Borda dupla */
+    text-align: center;
+}
+
+/* Estilos do Exercício 5: Seletores e Propriedades */
+
+/* Estilo para todas as tags <h2> */
+h2 {
+    font-size: 1.8em;
+    /* Aumenta o tamanho da fonte */
+    text-decoration: underline;
+    /* Aplica sublinhado */
+    color: #0056b3;
+    /* Uma cor para destacar os títulos */
+}
+
+/* Classe .destaque */
+.destaque {
+    font-style: italic;
+    /* Deixa o texto em itálico */
+    background-color: #e9ecef;
+    /* Aplica um leve background-color */
+    padding: 5px 10px;
+    /* Adiciona um pouco de padding para o fundo */
+    border-radius: 3px;
+    /* Bordas levemente arredondadas */
+    display: inline-block;
+    /* Permite que o background se ajuste ao texto */
+    margin-top: 10px;
+}
+
+/* ID #importante */
+#importante {
+    border-top: 8px solid #dc3545;
+    /* Adiciona uma borda superior mais espessa e vermelha */
+    padding-top: 15px;
+    /* Espaçamento entre a borda e o texto */
+    margin-top: 20px;
+    /* Margem superior para separar do conteúdo anterior */
+    color: #dc3545;
+    /* Cor do texto para combinar com a borda */
+    font-weight: bold;
+    /* Deixa o texto em negrito */
+}
