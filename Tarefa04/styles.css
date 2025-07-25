@@ -1,0 +1,338 @@
+/* Reset ou Normalize CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variáveis CSS */
+:root {
+    --primary-color: #0077cc;
+    /* Azul vibrante */
+    --secondary-color: #333;
+    /* Cinza escuro para texto */
+    --background-color: #f4f7f6;
+    /* Fundo claro */
+    --light-gray: #e9ecef;
+    /* Cinza claro para bordas/separadores */
+    --text-color: #495057;
+    /* Cor de texto padrão */
+    --heading-color: #212529;
+    /* Cor para títulos */
+    --border-radius: 8px;
+    --transition-speed: 0.3s ease;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* Seletores por elemento */
+h1,
+h2,
+h3 {
+    color: var(--heading-color);
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color var(--transition-speed);
+}
+
+a:hover {
+    color: #0056b3;
+    /* Um tom mais escuro de azul ao passar o mouse */
+}
+
+/* Layout Geral com Flexbox */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid white;
+    object-fit: cover;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.slogan {
+    font-size: 1.1em;
+    font-weight: 300;
+    opacity: 0.9;
+}
+
+nav {
+    background-color: var(--secondary-color);
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    /* Espaçamento entre os itens do menu */
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+nav a {
+    color: white;
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: var(--border-radius);
+    transition: background-color var(--transition-speed), transform var(--transition-speed);
+}
+
+nav a:hover {
+    background-color: #555;
+    transform: translateY(-2px);
+}
+
+main {
+    max-width: 960px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section {
+    padding: 40px 0;
+    border-bottom: 1px solid var(--light-gray);
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+/* Layout com CSS Grid para Habilidades e Projetos */
+.skills-grid,
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.skill-item,
+.project-item {
+    background-color: var(--light-gray);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform var(--transition-speed), box-shadow var(--transition-speed);
+}
+
+.skill-item:hover,
+.project-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.project-item .button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 15px;
+    transition: background-color var(--transition-speed);
+}
+
+.project-item .button:hover {
+    background-color: #0056b3;
+}
+
+aside {
+    background-color: #f0f3f5;
+    padding: 30px;
+    margin-top: 30px;
+    border-radius: var(--border-radius);
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+aside h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+aside ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 15px;
+}
+
+aside li {
+    margin-bottom: 8px;
+}
+
+aside a {
+    font-weight: bold;
+}
+
+/* Formulário de Contato */
+.contact-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid var(--light-gray);
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color var(--transition-speed);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+}
+
+.contact-form button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color var(--transition-speed), transform var(--transition-speed);
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+footer {
+    background-color: var(--secondary-color);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 30px;
+    font-size: 0.9em;
+}
+
+/* Pseudo-elementos */
+section::before {
+    content: " ";
+    display: block;
+    height: 5px;
+    width: 50px;
+    background-color: var(--primary-color);
+    margin: 0 auto 20px;
+    border-radius: 5px;
+}
+
+/* Responsividade com Media Queries */
+
+/* Para telas menores que 768px (tablets e celulares) */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0 10px;
+    }
+
+    nav a {
+        padding: 10px;
+        display: block;
+        /* Faz o link ocupar a largura total */
+    }
+
+    main {
+        margin: 15px auto;
+        padding: 15px;
+    }
+
+    section {
+        padding: 30px 0;
+    }
+
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: 1fr;
+        /* Uma coluna em telas pequenas */
+        gap: 20px;
+    }
+
+    .skill-item,
+    .project-item {
+        padding: 20px;
+    }
+
+    aside {
+        padding: 20px;
+    }
+}
+
+/* Para telas menores que 480px (celulares) */
+@media (max-width: 480px) {
+    .header-content h1 {
+        font-size: 1.8em;
+    }
+
+    .slogan {
+        font-size: 0.9em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        font-size: 1.2em;
+    }
+
+    .contact-form button {
+        width: 100%;
+    }
+}
+
+#sobre p {
+    text-align: justify;
+    /* Alinha o texto para preencher a largura total, com bordas retas */
+}
