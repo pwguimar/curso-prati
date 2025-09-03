@@ -1,0 +1,176 @@
+/* src/pages/SearchPage.css - Versão Completa e Corrigida */
+
+/* Container principal da página de busca */
+.search-page {
+    width: 100%;
+    padding: 2rem 1rem;
+    margin: 0 auto;
+    /* Correção: Garantir que está no fluxo normal, não absoluto */
+    position: static;
+    /* Ou relative, mas NÃO absolute/fixed */
+    /* Removido top, left, etc. que possam ter estado aqui */
+}
+
+.search-page-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+    font-size: 2rem;
+    width: 100%;
+    /* Garantir que não é afetado por posicionamento externo */
+    position: static;
+}
+
+/* Container da barra de busca - NÃO deve usar position: absolute */
+.search-input-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+    width: 100%;
+    /* Correção: Remover qualquer position que tire do fluxo */
+    position: static;
+    /* Garante fluxo normal */
+    /* Removido top, left, transform, etc. */
+}
+
+/* A própria barra de busca */
+.search-input {
+    width: 100%;
+    max-width: 600px;
+    padding: 0.75rem 1rem;
+    font-size: 1rem;
+    border: 2px solid #bdc3c7;
+    border-radius: 8px;
+    transition: border-color 0.2s ease;
+    /* Correção: Garantir que está no fluxo normal */
+    position: static;
+    /* Ou relative para ajustes finos */
+    margin: 0 auto;
+    /* Centraliza dentro do container flex */
+    /* Removido top, left, absolute, fixed */
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 2px rgba(52, 152, 219, 0.2);
+}
+
+/* Grid de filmes - Deve fluir normalmente após a barra de busca */
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    /* Correção: Garantir que começa após a barra de busca */
+    position: static;
+    /* Ou relative */
+    clear: both;
+    /* Limpa floats, se houver */
+    /* Removido top, left, absolute, fixed */
+}
+
+/* === Seções para Loading, Erro, Sem Resultados === */
+/* (Mantendo estilos de componentes reutilizáveis, mas garantindo posicionamento correto) */
+
+/* Se o seu componente Loading estiver envolvido por uma div com esta classe */
+.loading-container {
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
+    position: static;
+    /* Ou relative */
+}
+
+/* Se o seu componente Error estiver envolvido por uma div com esta classe */
+.error-container {
+    width: 100%;
+    text-align: center;
+    padding: 2rem;
+    position: static;
+    /* Ou relative */
+}
+
+.no-results {
+    text-align: center;
+    padding: 2rem;
+    color: #7f8c8d;
+    font-size: 1.1rem;
+    width: 100%;
+    position: static;
+}
+
+/* === Paginação === */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+    width: 100%;
+    position: static;
+    /* Garante que está no fluxo */
+    /* Removido position: absolute, fixed */
+}
+
+.pagination-button {
+    padding: 0.5rem 1rem;
+    border: 1px solid #bdc3c7;
+    background-color: #ecf0f1;
+    color: #2c3e50;
+    cursor: pointer;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    /* Garantir que o botão em si não é posicionado de forma problemática */
+    position: static;
+}
+
+.pagination-button:hover:not(:disabled) {
+    background-color: #d5dbdb;
+    border-color: #95a5a6;
+}
+
+.pagination-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pagination-info {
+    font-weight: 500;
+    color: #2c3e50;
+    /* Garantir que o texto da paginação não é posicionado de forma problemática */
+    position: static;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+    .search-page {
+        padding: 1rem;
+    }
+
+    .search-page-title {
+        font-size: 1.5rem;
+    }
+
+    .movies-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 1rem;
+    }
+
+    .search-input {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.9rem;
+    }
+
+    .pagination {
+        gap: 0.5rem;
+    }
+
+    .pagination-button {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+}

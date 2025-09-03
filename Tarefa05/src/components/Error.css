@@ -1,0 +1,31 @@
+/* src/components/Error.css - Minimalista */
+.error-container {
+    background-color: #ffebee;
+    color: #c62828;
+    border: 1px solid #ffcdd2;
+    border-radius: 4px;
+    padding: 1rem;
+    margin: 1rem 0;
+    text-align: center;
+    width: 100%;
+    /* Garantir que está no fluxo normal */
+    position: static;
+}
+
+.error-container p {
+    margin: 0 0 0.5rem 0;
+}
+
+.error-retry-button {
+    background-color: #c62828;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.error-retry-button:hover {
+    background-color: #b71c1c;
+}

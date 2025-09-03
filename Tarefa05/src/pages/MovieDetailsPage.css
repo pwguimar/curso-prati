@@ -1,0 +1,230 @@
+/* src/pages/MovieDetailsPage.css */
+.movie-details-page {
+    position: relative;
+    width: 100%;
+    /* Ocupa 100% */
+    min-height: 100vh;
+    color: #fff;
+    /* Removido max-width */
+}
+
+.movie-details-backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60vh;
+    /* Altura do backdrop */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+    /* Fundo sutil */
+    z-index: -1;
+    /* Fica atrás do conteúdo */
+}
+
+.movie-details-container {
+    padding: 2rem 1rem;
+    /* Padding interno */
+    width: 100%;
+    /* Container ocupa 100% */
+    margin: 0 auto;
+    /* Pode centralizar se quiser limitar max-width */
+    /* max-width: 1600px; */
+    /* Opcional: limitar largura máxima em telas muito largas */
+}
+
+.movie-details-back-link {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: background-color 0.2s ease;
+    margin-left: 1rem;
+    /* Alinha com o conteúdo */
+}
+
+.movie-details-back-link:hover {
+    background-color: rgba(255, 255, 255, 1);
+    text-decoration: underline;
+}
+
+.movie-details-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    background-color: rgba(255, 255, 255, 0.95);
+    /* Fundo branco semi-transparente */
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    color: #2c3e50;
+    width: 100%;
+    /* Conteúdo ocupa 100% do container */
+    margin: 0 auto;
+    /* Centraliza se houver max-width */
+    /* max-width: 1400px; */
+    /* Opcional: limitar largura máxima */
+}
+
+.movie-details-poster-section {
+    flex: 1 1 300px;
+    /* Cresce até 300px, depois quebra linha */
+}
+
+.movie-details-poster {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: block;
+    margin: 0 auto;
+}
+
+.movie-details-info {
+    flex: 2 1 500px;
+    /* Cresce mais, mínimo 500px */
+}
+
+.movie-details-title {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+    color: #2c3e50;
+}
+
+.movie-details-year {
+    color: #7f8c8d;
+    font-weight: normal;
+}
+
+.movie-details-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+.movie-details-rating,
+.movie-details-runtime,
+.movie-details-genres {
+    font-weight: 500;
+}
+
+.star-icon {
+    color: #f1c40f;
+}
+
+.movie-details-section {
+    margin-bottom: 1.5rem;
+}
+
+.movie-details-section-title {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+    font-size: 1.3rem;
+}
+
+.movie-details-overview {
+    line-height: 1.6;
+    color: #34495e;
+}
+
+.movie-details-cast {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 1rem;
+}
+
+.cast-member {
+    text-align: center;
+}
+
+.cast-member-name {
+    margin: 0 0 0.2rem 0;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+.cast-member-character {
+    margin: 0;
+    color: #7f8c8d;
+    font-size: 0.85rem;
+}
+
+.favorite-button {
+    padding: 0.75rem 1.5rem;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+    margin-top: 1rem;
+}
+
+.favorite-button:hover {
+    background-color: #c0392b;
+}
+
+.favorite-button.favorited {
+    background-color: #27ae60;
+}
+
+.favorite-button.favorited:hover {
+    background-color: #229954;
+}
+
+.movie-details-not-found {
+    text-align: center;
+    padding: 2rem;
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .movie-details-container {
+        padding: 1rem;
+        /* Menos padding em mobile */
+    }
+
+    .movie-details-content {
+        padding: 1rem;
+        flex-direction: column;
+        /* Coluna em mobile */
+    }
+
+    .movie-details-title {
+        font-size: 1.5rem;
+    }
+
+    .movie-details-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .movie-details-poster {
+        max-width: 100%;
+    }
+
+    .movie-details-cast {
+        grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    }
+
+    .movie-details-back-link {
+        margin-left: 0.5rem;
+        /* Menos margem em mobile */
+    }
+}

@@ -1,0 +1,125 @@
+/* src/pages/FavoritesPage.css */
+.favorites-page {
+    padding: 2rem 1rem;
+    /* Padding interno */
+    background-color: #f5f7fa;
+    min-height: calc(100vh - 60px);
+    /* Ajuste conforme a altura do navbar */
+    width: 100%;
+    /* Ocupa 100% */
+    /* Removido max-width */
+}
+
+.favorites-container {
+    width: 100%;
+    /* Container ocupa 100% */
+    margin: 0 auto;
+    /* Pode centralizar se quiser limitar max-width */
+    /* max-width: 1600px; */
+    /* Opcional: limitar largura máxima */
+}
+
+.favorites-title {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #2c3e50;
+}
+
+.favorites-back-link {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    color: #3498db;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 1rem;
+    /* Alinha com o conteúdo */
+}
+
+.favorites-back-link:hover {
+    text-decoration: underline;
+}
+
+.favorites-empty {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    width: 100%;
+}
+
+.favorites-empty p {
+    margin-bottom: 1.5rem;
+    color: #7f8c8d;
+    font-size: 1.1rem;
+}
+
+.favorites-go-search {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.favorites-go-search:hover {
+    background-color: #2980b9;
+}
+
+.movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    /* Grid ocupa 100% */
+}
+
+.favorite-item {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    /* Item ocupa 100% da coluna do grid */
+}
+
+.remove-favorite-button {
+    margin-top: auto;
+    /* Empurra o botão para o final */
+    padding: 0.5rem;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 0 0 12px 12px;
+    /* Bordas arredondadas apenas na parte inferior */
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+    width: 100%;
+    /* Ocupa toda a largura do card */
+}
+
+.remove-favorite-button:hover {
+    background-color: #c0392b;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .favorites-page {
+        padding: 1rem;
+        /* Menos padding em mobile */
+    }
+
+    .movies-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 1rem;
+    }
+
+    .favorites-back-link {
+        margin-left: 0.5rem;
+        /* Menos margem em mobile */
+    }
+}
