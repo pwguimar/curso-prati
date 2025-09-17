@@ -1,0 +1,29 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Mova estas variáveis para tailwind.config.js ou deixe-as aqui apenas se forem usadas diretamente no CSS customizado */
+/*
+:root {
+    --color-background-light: #ffffff;
+    --color-text-light: #333333;
+    --color-primary-light: #007bff;
+    --color-accent-light: #28a745;
+    --color-danger-light: #dc3545;
+    --color-border-light: #dddddd;
+    --color-shadow-light: rgba(0, 0, 0, 0.1);
+    --color-badge-light: #ffc107;
+}
+
+.dark {
+    --color-background-dark: #1a1a1a;
+    --color-text-dark: #f0f0f0;
+    --color-primary-dark: #4d9eff;
+    --color-accent-dark: #3ad65a;
+    --color-danger-dark: #ff6b6b;
+    --color-border-dark: #444444;
+    --color-shadow-dark: rgba(0, 0, 0, 0.3);
+    --color-badge-dark: #ffd43b;
+}
+*/
