@@ -25,6 +25,7 @@ Implementar a mesma tela/interface de uma mini loja utilizando as seguintes téc
 
 A estrutura geral do projeto é a seguinte:
 
+```bash
 mini-loja-react/
 ├── node_modules/
 ├── public/
@@ -91,6 +92,7 @@ mini-loja-react/
 ├── tailwind.config.js
 ├── postcss.config.js
 └── README.md
+```
 
 ## 🚀 Como Rodar o Projeto
 
